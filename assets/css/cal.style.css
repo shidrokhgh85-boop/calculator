@@ -45,7 +45,7 @@
 #btn-box{
     display: flex;
     flex-wrap: wrap;
-    gap: 3px;
+    gap: 5px 3px;
     justify-content: center;
     height: max-content;
     padding-top: 60px;

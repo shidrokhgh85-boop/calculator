@@ -12,9 +12,8 @@
 <body>
     <section id="section-class">
         <div id="main-body" class="">
-            <form action="" id="cal-form">
+            <form action="" id="cal-form" autocomplete="off">
                 <input type="text" id="display-box">
-                <i class="fa-solid fa-calculator"></i>
                 <div id="btn-box" class="">
                     <!-- <button value="delete" id="delete" class="btn op">=></button> -->
                     <button value="1" id="n1" class="btn">1</button>
@@ -35,14 +34,23 @@
                     <button value="multi" id="multi" class="btn op">
                         <i class="fa-solid fa-xmark"></i>
                     </button>
-                    <button value="clear" id="clrar" class="btn op">
-                        <i class="fa-solid fa-eraser"></i>
-                    </button>
-                    <button value="equal" id="equal" class="btn op">
-                        <i class="fa-solid fa-equals"></i>
+                    <button value="0" id="n0" class="btn ">0</button>
+                    <button value="." id="auditor" class="btn">.</button>
+                    <button value="+/-" id="pos-neg" class="btn">
+                        x<sup>2</sup>
                     </button>
                     <button value="divition" id="divition" class="btn op">
                         <i class="fa-solid fa-divide"></i>
+                    </button>                    
+                    <button value="clear" id="clrar" class="btn op">
+                        <i class="fa-solid fa-eraser"></i>
+                    </button>
+                    <button value="divition" id="divition" class="btn op">
+                        <i class="fa-solid fa-delete-left"></i>
+
+                    </button>
+                    <button value="equal" id="equal" class="btn op">
+                        <i class="fa-solid fa-equals"></i>
                     </button>
                 </div>
             </form>
