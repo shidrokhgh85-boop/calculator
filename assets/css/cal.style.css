@@ -1,10 +1,11 @@
 #section-class{
-    background-color: blue;
-    height: 600px;
-    /* display: flex; */
+    height: 615px;
+    margin: 10px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #main-body{
-    background-color: red;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -15,25 +16,72 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #dac4ee;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 3px 7px;
+    border: 2.5px solid #6c4483;
 }
 #display-box{
     width: 90%;
     padding: auto;
-    height: 25px;
+    height: 75px;
+    margin-top: 15px;
+    border-radius: 5px;
+    background-color: #f0edf7;
+    font-size: larger;
+    border: 1.8px solid #87758f;
+
 }
+#display-box:focus{
+    background-color: #e6e3ec;
+    outline: none;
+    border: 3px solid #6c4483;
+    color: #1e1c62;
+}
+
 #btn-box{
-    background-color: aquamarine;
     display: flex;
     flex-wrap: wrap;
     gap: 3px;
     justify-content: center;
     height: max-content;
+    padding-top: 60px;
+    padding-bottom: 15px;
+    
 }
 .btn{
         width: 20%;
-        height: 35px;
-
+        height: 49px;
+        background-color: #e9e6ee;
+        border: 1.8px solid #87758f;
+        border-radius: 5px;
+        color: #1e1c62;
+        transition-duration: 0.1;
+}
+.btn:hover{
+    background-color: #d5d2db;
+        border: 1.7px solid #846f9b;
+        color: #5a3232;
+    
 }
 .op{
     width: 30%;
 }
+#clrar:hover{
+    color: rgb(196, 0, 0);
+}
+.fa-calculator{
+    color: #4f405e;
+    font-size: 29px;
+    opacity: 0.6;
+    display: flex;
+    position: absolute;
+    top: 175px;
+    right: 410px;
+}
+
+
+
