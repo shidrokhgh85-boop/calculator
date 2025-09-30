@@ -46,6 +46,8 @@ const addInput = (e) => {
 btns.forEach((btn) => {
   btn.addEventListener("click", addInput);
 });
+console.log("hi");
+
 
 // input.addEventListener("keypress", (e) => {
 //   if (e.key === "Enter" || e.key === "=") {
