@@ -22,7 +22,11 @@ input.addEventListener("keypress", (e) => {
 const addInput = (e) => {
   e.preventDefault();
   console.log(input.value);
-  if (e.target.id === "equal") {
+  if(e.target.tagName === "I"){
+        e.target.value = e.target.parentElement.value
+
+    }
+  if (e.target.value === " = ") {
     if (input.value != "") {
       try {
         input.value = eval(input.value.trim());
@@ -30,12 +34,15 @@ const addInput = (e) => {
         input.value = "error";
       }
     } else input.value = "";
-  } else if (e.target.id === "clear") {
+  } else if (e.target.value === "clear") {
     input.value = "";
-  } else {
-    if(e.target.tagName === "I"){
-        e.target.value = e.target.parentElement.value
-    }
+  }else if (e.target.value === "delete"){
+    if (input.value.length > 0) {
+    input.value = input.value.slice(0, -1);
+  input.focus();
+
+    }}
+   else {
     
     input.value += e.target.value;
   }
