@@ -3,17 +3,15 @@ const input = document.getElementById("display-box");
 const equal_btn = document.querySelector("#equal");
 console.log(btns);
 // بالا نیامدن صفه کلید در موبایل
-const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-const befocus = (isMobile) => {
-  if (isMobile) {
-    input.addEventListener("focus", (e) => {
-      e.target.blur();
-    });
-  } else {
-    input.focus();
+let isDesktop = window.matchMedia("(min-width:768px)").matches
+if (isDesktop) input.focus();
+input.addEventListener("focus", (e) => {
+  if (!isDesktop) {
+    e.target.blur();
   }
-};
-befocus(isMobile);
+});
+
+
 // گرفتن ورودی از کیبورد در حالت دسکتاپ
 input.addEventListener("keypress", (e) => {
   const allowed = "1234567890+-*/.Backspace=";
@@ -54,7 +52,7 @@ const addInput = (e) => {
   } else {
     input.value += e.target.value;
   }
-  befocus(isMobile);
+  if (isDesktop) input.focus();
   e.stopPropagation();
 };
 
