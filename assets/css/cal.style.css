@@ -11,6 +11,7 @@
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+    height: 100vh;
 }
 #cal-form{
     width: 400px;
@@ -23,7 +24,7 @@
     flex-direction: column;
     border-radius: 10px;
     padding: 3px 7px;
-    border: 2.5px solid #6c4483;
+    border: 2px solid #444883;
     
 }
 #display-box{
@@ -34,14 +35,14 @@
     border-radius: 5px;
     background-color: #f0edf7;
     font-size: larger;
-    border: 1.8px solid #87758f;
+    border: 1.8px solid #444883;
     font-size: 25px;
 
 }
 #display-box:focus{
     background-color: #e6e3ec;
     outline: none;
-    border: 3px solid #6c4483;
+    border: 2px solid #444883;
     color: #1e1c62;
 }
 
@@ -70,15 +71,15 @@
         background-color: #e9e9ee;
         border: 1.8px solid #87758f;
         border-radius: 5px;
-        color: #1e1c62;
+        color: #302d99;
         transition-duration: 0.1s;
         box-sizing: border-box;
 }
 .btn:hover{
     
-    background-color: #d5d2db;
+    background-color: #d2d3db;
         border: 1.7px solid #7a7997e7;
-        color: #5a3232;
+        color: #19005e;
     
 }
 .op{
@@ -119,6 +120,61 @@
 
 .fa-delete-left{
     font-size: 25px;
+}
+.style{
+    background-color: #9594b459;
+}
+
+@media (max-width: 768px) {
+    #cal-form {
+        width: 280px;
+        padding: 2px 5px;
+    }
+    #display-box {
+        font-size: 20px;
+        height: 60px;
+    }
+    #btn-box {
+        padding-top: 40px;
+        gap: 3px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .btn {
+        height: 50px;
+        font-size: 1rem;
+    }
+    .fa-calculator {
+        right: 10px;
+        top: 5px;
+        font-size: 22px;
+    }
+    .delete {
+        top: 45px;
+        right: 10px;
+        width: 35px;
+        height: 25px;
+    }
+    .fa-delete-left{
+        font-size: 21.7px;
+        position: absolute;
+        left: -39px;
+        top: 205px;
+    }
+    #clear:hover{
+    color: rgb(196, 0, 0);
+    }
+    .delete:hover{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    color: rgb(190, 0, 0);
+    }
+    .btn:hover{
+    
+    background-color: #d2d3db;
+        border: 1.7px solid #7a7997e7;
+        color: #19005e;
+    
+    }
 }
 
 
