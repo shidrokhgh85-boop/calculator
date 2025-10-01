@@ -7,10 +7,11 @@ input.focus();
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
 if (isMobile) {
-  input.addEventListener("focus", (e) => {
-    e.target.blur();
-  });
+  input.setAttribute("readonly", true); // فقط تو موبایل
+} else {
+  input.removeAttribute("readonly");    // تو دسکتاپ عادی
 }
+
 // گرفتن ورودی از کیبورد در حالت دسکتاپ
 input.addEventListener("keypress", (e) => {
   const allowed = "1234567890+-*/.Backspace=";
