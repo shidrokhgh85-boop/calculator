@@ -2,17 +2,16 @@ const btns = document.querySelectorAll(".btn");
 const input = document.getElementById("display-box");
 const equal_btn = document.querySelector("#equal");
 console.log(btns);
-
 input.focus();
-
+// بالا نیامدن صفه کلید در موبایل
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
 if (isMobile) {
   input.addEventListener("focus", (e) => {
-    e.target.blur(); // تو موبایل کیبورد بالا نیاد
+    e.target.blur();
   });
 }
-
+// گرفتن ورودی از کیبورد در حالت دسکتاپ
 input.addEventListener("keypress", (e) => {
   const allowed = "1234567890+-*/.Backspace=";
   console.log(e.key)
@@ -48,7 +47,7 @@ const addInput = (e) => {
     input.value = "";
   }else if (e.target.value === "delete"){
     if (input.value.length > 0) {
-    input.value = input.value.slice(0, -1);
+    input.value = input.value.slice(0, -1);// تک تک حذف کردن
 
     }}
    else {
@@ -62,23 +61,7 @@ const addInput = (e) => {
 btns.forEach((btn) => {
   btn.addEventListener("click", addInput);
 });
-console.log("hi");
 
 
-// input.addEventListener("keypress", (e) => {
-//   if (e.key === "Enter" || e.key === "=") {
-//     try {
-//       input.value = eval(input.value.trim());
-//     } catch {
-//       input.value = "error";
-//     }
-//     input.focus();
-//   }
-// });
-// const execute = () => {
-//     console.log(input.value)
-//     try{input.value = eval(input.value);}
-//     catch{input.value = "error"}
 
-// }
-// equal_btn.addEventListener("click", execute);
+
