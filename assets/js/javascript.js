@@ -3,6 +3,16 @@ const input = document.getElementById("display-box");
 const equal_btn = document.querySelector("#equal");
 console.log(btns);
 
+input.focus();
+
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+if (isMobile) {
+  input.addEventListener("focus", (e) => {
+    e.target.blur(); // تو موبایل کیبورد بالا نیاد
+  });
+}
+
 input.addEventListener("keypress", (e) => {
   const allowed = "1234567890+-*/.Backspace=";
   console.log(e.key)
@@ -39,7 +49,6 @@ const addInput = (e) => {
   }else if (e.target.value === "delete"){
     if (input.value.length > 0) {
     input.value = input.value.slice(0, -1);
-  input.focus();
 
     }}
    else {
