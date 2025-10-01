@@ -4,14 +4,16 @@ const equal_btn = document.querySelector("#equal");
 console.log(btns);
 // بالا نیامدن صفه کلید در موبایل
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-if (isMobile) {
-  input.addEventListener("focus", (e) => {
-    e.target.blur();
-  });
-} else {
-  input.focus();
-}
-
+const befocus = () => {
+  if (isMobile) {
+    input.addEventListener("focus", (e) => {
+      e.target.blur();
+    });
+  } else {
+    input.focus();
+  }
+};
+befocus();
 // گرفتن ورودی از کیبورد در حالت دسکتاپ
 input.addEventListener("keypress", (e) => {
   const allowed = "1234567890+-*/.Backspace=";
@@ -52,13 +54,7 @@ const addInput = (e) => {
   } else {
     input.value += e.target.value;
   }
-  if (isMobile) {
-  input.addEventListener("focus", (e) => {
-    e.target.blur();
-  });
-} else {
-  input.focus();
-}
+  befocus();
   e.stopPropagation();
 };
 
