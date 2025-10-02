@@ -25,10 +25,10 @@
     border-radius: 10px;
     padding: 3px 7px;
     border: 2px solid #444883;
-    
+    transition-duration: 0.2s;
 }
 #cal-form:hover {
-    transform: translateY(-3px);
+    transform: translateY(-1px);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
@@ -79,13 +79,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        transition-duration: 0.2s;
 }
 .btn:hover{
     
         background-color: #d8d9e6;
         border: 1.7px solid #7a7997e7;
         color: #19005e;
-        transform: translateY(-2px);
+        transform: translateY(-1px);
 
 }
 .op{
